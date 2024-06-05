@@ -1,14 +1,30 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import sendEmail from "./sendEmail";
 
 const Input = () => {
   const [email, setEmail] = useState("");
+
+  const sendEmail = async (inputs: any) => {
+    const templateParams = {
+      to_name: "Brady",
+      from_name: "Tutoring",
+      subject: "New TaperAU Person",
+      message: `details: ${JSON.stringify(inputs)}`,
+    };
+
+    const serviceId = "service_010xydf";
+    const templateName = "template_1dcm4rn";
+    const publicKey = "Yd6r5t5etWEKD3GNh";
+    return emailjs.send(serviceId, templateName, templateParams, publicKey);
+  };
   const onClick = async (e) => {
     e.preventDefault();
     await sendEmail({ email });
+    window.location.reload();
   };
+
   return (
     <>
       <input
