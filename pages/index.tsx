@@ -19,7 +19,7 @@ const IndexPage = () => (
         <h3 className="text-xl font-light tracking-wider uppercase">
           Coming soon
         </h3>
-        <h1 className="font-extrabold text-7xl lg:text-9xl">We’r blowing up</h1>
+        <h1 className="font-extrabold text-7xl lg:text-9xl">We’re blowing up</h1>
         <p className="mx-10 text-xl tracking-wide lg:text-2xl lg:max-w-xl lg:mx-auto">
           We`re under construction. Check back for an update soon. Stay in
           touch!
